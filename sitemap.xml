@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://xieb.github.io/blog/about/index.html</loc>
+    
+    <lastmod>2019-02-12T05:04:49.160Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://xieb.github.io/blog/2019/02/12/markdown-test/</loc>
     
     <lastmod>2019-02-12T03:14:26.000Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>https://xieb.github.io/blog/2019/02/12/gitea-docker-centos7-%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E8%BF%87%E7%A8%8B/</loc>
     
     <lastmod>2019-02-12T02:54:19.819Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://xieb.github.io/blog/about/index.html</loc>
-    
-    <lastmod>2019-02-12T02:52:27.327Z</lastmod>
     
   </url>
   
