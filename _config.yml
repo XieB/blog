@@ -79,7 +79,7 @@ theme: apollo
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/XieB/xieb.github.io.git
+  repo: https://github.com/XieB/blog.git
   branch: gh-pages
 
 
