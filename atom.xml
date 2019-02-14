@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://xieb.github.io/blog/"/>
-  <updated>2019-02-14T02:58:24.211Z</updated>
+  <updated>2019-02-14T02:59:57.606Z</updated>
   <id>https://xieb.github.io/blog/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://xieb.github.io/blog/2019/02/14/dns/"/>
     <id>https://xieb.github.io/blog/2019/02/14/dns/</id>
     <published>2019-02-14T02:25:55.000Z</published>
-    <updated>2019-02-14T02:58:24.211Z</updated>
+    <updated>2019-02-14T02:59:57.606Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="每次查询都会从网卡属性中的第一个DNS服务器开始查"><a href="#每次查询都会从网卡属性中的第一个DNS服务器开始查" class="headerlink" title="每次查询都会从网卡属性中的第一个DNS服务器开始查"></a>每次查询都会从网卡属性中的第一个DNS服务器开始查</h3><ul><li>以为先配置内网DNS服务器，就能确保内网地址都能解析了。但是谁也没法保证内网查询永远不会出现超时。当内网服务器出现超时无返回结果，它在客户端DNS列表中的查询顺序会降低。以后再查询的时候就不会先查它了。所以，你填的DNS列表中的顺序并没有太大意义，运行了一段时间后，他们的顺序也会变得不同。</li></ul><h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><blockquote><p>我在内网用dnsmasq搞了一个服务器，配置dl.tt泛解析，但解析的域名有时走dnsmasq，有时走备用dns</p><ul><li>暂时使用一个主dns解决。</li></ul></blockquote><h3 id="后续"><a href="#后续" class="headerlink" title="后续"></a>后续</h3><ul><li>使用regedit打开注册表</li><li>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Dnscache\Parameters</li><li>右键新建 DWORD，名为ServerPriorityTimeLimit，值为0，重启解决</li></ul>]]></content>
+    <content type="html"><![CDATA[<h3 id="每次查询都会从网卡属性中的第一个DNS服务器开始查"><a href="#每次查询都会从网卡属性中的第一个DNS服务器开始查" class="headerlink" title="每次查询都会从网卡属性中的第一个DNS服务器开始查"></a>每次查询都会从网卡属性中的第一个DNS服务器开始查</h3><ul><li>以为先配置内网DNS服务器，就能确保内网地址都能解析了。但是谁也没法保证内网查询永远不会出现超时。当内网服务器出现超时无返回结果，它在客户端DNS列表中的查询顺序会降低。以后再查询的时候就不会先查它了。所以，你填的DNS列表中的顺序并没有太大意义，运行了一段时间后，他们的顺序也会变得不同。</li></ul><h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><p><strong>我在内网用dnsmasq搞了一个服务器，配置dl.tt泛解析，但解析的域名有时走dnsmasq，有时走备用dns</strong></p><ul><li>暂时使用一个主dns解决。</li></ul><h3 id="后续"><a href="#后续" class="headerlink" title="后续"></a>后续</h3><ul><li>使用regedit打开注册表</li><li>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Dnscache\Parameters</li><li>右键新建 DWORD，名为ServerPriorityTimeLimit，值为0，重启解决</li></ul>]]></content>
     
     <summary type="html">
     
