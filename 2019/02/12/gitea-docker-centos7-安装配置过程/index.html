@@ -1,16 +1,27 @@
-<!DOCTYPE html><html><head><meta name="generator" content="Hexo 3.8.0"><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> gitea docker(centos7)安装配置过程 · code</title><meta name="description" content="gitea docker(centos7)安装配置过程 - xie xie"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/blog/favicon.png"><link rel="stylesheet" href="/blog/css/apollo.css"><link rel="search" type="application/opensearchdescription+xml" href="https://xieb.github.io/blog/atom.xml" title="code"></head><body><div class="wrap"><header><a href="/blog/" class="logo-link"><img src="/blog/favicon.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/blog/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="/blog/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="/blog/about/" target="_self" class="nav-list-link">ABOUT</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">gitea docker(centos7)安装配置过程</h1><div class="post-info">Feb 12, 2019</div><div class="post-content"><h5 id="安装docker-参考官方教程（建议使用最新版本）"><a href="#安装docker-参考官方教程（建议使用最新版本）" class="headerlink" title="安装docker,参考官方教程（建议使用最新版本）"></a>安装docker,参考官方教程（建议使用最新版本）</h5><p><code>curl -fsSL https://get.docker.com/ | sh</code><br>&nbsp;</p>
-<h5 id="添加开机启动"><a href="#添加开机启动" class="headerlink" title="添加开机启动"></a>添加开机启动</h5><p><code>systemctl enable docker</code><br>&nbsp;</p>
-<h5 id="拉取gitea-docker镜像"><a href="#拉取gitea-docker镜像" class="headerlink" title="拉取gitea docker镜像"></a>拉取gitea docker镜像</h5><p><code>docker pull gitea/gitea:latest</code><br>&nbsp;</p>
-<h5 id="创建挂载目录-保证重启docker数据不丢失"><a href="#创建挂载目录-保证重启docker数据不丢失" class="headerlink" title="创建挂载目录,保证重启docker数据不丢失"></a>创建挂载目录,保证重启docker数据不丢失</h5><p><code>sudo mkdir -p /var/lib/gitea</code><br>&nbsp;</p>
-<h5 id="创建docker容器"><a href="#创建docker容器" class="headerlink" title="创建docker容器"></a>创建docker容器</h5><p><code>docker run -d --name=gitea -p 10022:22 -p 10080:3000 -v /var/lib/gitea:/data gitea/gitea:latest</code></p>
+<!DOCTYPE html><html><head><meta name="generator" content="Hexo 3.8.0"><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> gitea docker(centos7)安装配置过程 · code</title><meta name="description" content="gitea docker(centos7)安装配置过程 - xie xie"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/blog/favicon.png"><link rel="stylesheet" href="/blog/css/apollo.css"><link rel="search" type="application/opensearchdescription+xml" href="https://xieb.github.io/blog/atom.xml" title="code"></head><body><div class="wrap"><header><a href="/blog/" class="logo-link"><img src="/blog/favicon.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/blog/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="/blog/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="/blog/about/" target="_self" class="nav-list-link">ABOUT</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">gitea docker(centos7)安装配置过程</h1><div class="post-info">Feb 12, 2019</div><div class="post-content"><h5>安装docker,参考官方教程（建议使用最新版本）</h5>
+<p><code>curl -fsSL https://get.docker.com/ | sh</code>
+ </p>
+<h5>添加开机启动</h5>
+<p><code>systemctl enable docker</code>
+ </p>
+<h5>拉取gitea docker镜像</h5>
+<p><code>docker pull gitea/gitea:latest</code>
+ </p>
+<h5>创建挂载目录,保证重启docker数据不丢失</h5>
+<p><code>sudo mkdir -p /var/lib/gitea</code>
+ </p>
+<h5>创建docker容器</h5>
+<p><code>docker run -d --name=gitea -p 10022:22 -p 10080:3000 -v /var/lib/gitea:/data gitea/gitea:latest</code></p>
 <blockquote>
 <p>创建一个name是gitea,容器端口22映射到母机10022、3000映射到母机10080，挂载母机/var/lib/gitea到docker容器内作为/data挂载点</p>
 </blockquote>
 <blockquote>
 <p>登入后会让你填写基本信息，数据库建议选择sqlite，免去安装数据库的麻烦。</p>
 </blockquote>
-<p>&nbsp;</p>
-<h5 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h5><blockquote>
+<p> </p>
+<h5>配置文件</h5>
+<blockquote>
 <p>安装完成后，修改配置文件conf/app.ini</p>
 </blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SSH_PORT         = 20022 //web页面显示的ssh端口</span><br><span class="line">LANDING_PAGE = explore //默认显示登录页</span><br></pre></td></tr></table></figure></div></article></div></main><footer><div class="paginator"><a href="/blog/2019/02/12/markdown-test/" class="prev">上一篇</a><a href="/blog/2019/02/11/hello-world/" class="next">下一篇</a></div><div class="copyright"><p>© 2015 - 2019 <a href="https://xieb.github.io/blog">xie xie</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/pinggod/hexo-theme-apollo" target="_blank">hexo-theme-apollo</a>.</p></div></footer></div><script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script></body></html>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SSH_PORT         = 20022 //web页面显示的ssh端口</span><br><span class="line">LANDING_PAGE = explore //默认显示登录页</span><br></pre></td></tr></table></figure></p>
+</div></article></div></main><footer><div class="paginator"><a href="/blog/2019/02/12/markdown-test/" class="prev">上一篇</a><a href="/blog/2019/02/11/hello-world/" class="next">下一篇</a></div><div class="copyright"><p>© 2015 - 2019 <a href="https://xieb.github.io/blog">xie xie</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/pinggod/hexo-theme-apollo" target="_blank">hexo-theme-apollo</a>.</p></div></footer></div><script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script></body></html>

@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://xieb.github.io/blog/"/>
-  <updated>2019-02-12T03:14:26.000Z</updated>
+  <updated>2019-02-14T02:54:06.001Z</updated>
   <id>https://xieb.github.io/blog/</id>
   
   <author>
@@ -17,19 +17,49 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>DNS 理解误区及问题</title>
+    <link href="https://xieb.github.io/blog/2019/02/14/dns/"/>
+    <id>https://xieb.github.io/blog/2019/02/14/dns/</id>
+    <published>2019-02-14T02:25:55.000Z</published>
+    <updated>2019-02-14T02:54:06.001Z</updated>
+    
+    <content type="html"><![CDATA[<h3>每次查询都会从网卡属性中的第一个DNS服务器开始查</h3><blockquote><p>以为先配置内网DNS服务器，就能确保内网地址都能解析了。但是谁也没法保证内网查询永远不会出现超时。当内网服务器出现超时无返回结果，它在客户端DNS列表中的查询顺序会降低。以后再查询的时候就不会先查它了。所以，你填的DNS列表中的顺序并没有太大意义，运行了一段时间后，他们的顺序也会变得不同。</p></blockquote><h3>问题</h3><p>我在内网用dnsmasq搞了一个服务器，配置dl.tt泛解析，但解析的域名有时走dnsmasq，有时走备用dns</p><blockquote><p>暂时使用一个主dns解决。</p></blockquote><h3>后续</h3><blockquote><p>使用regedit打开注册表HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Dnscache\Parameters右键新建 DWORD，名为ServerPriorityTimeLimit，值为0，重启解决</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3&gt;每次查询都会从网卡属性中的第一个DNS服务器开始查&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;以为先配置内网DNS服务器，就能确保内网地址都能解析了。但是谁也没法保证内网查询永远不会出现超时。当内网服务器出现超时无返回结果，它在客户端DNS列表中的查询顺序会降低。以后再查
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>markdown 语法</title>
     <link href="https://xieb.github.io/blog/2019/02/12/markdown-test/"/>
     <id>https://xieb.github.io/blog/2019/02/12/markdown-test/</id>
     <published>2019-02-12T02:59:33.000Z</published>
     <updated>2019-02-12T03:14:26.000Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="这是h2标题"><a href="#这是h2标题" class="headerlink" title="这是h2标题"></a>这是h2标题</h3><p><strong>这是加粗的字体</strong><br><em>这是斜体</em><br><strong><em>斜体加粗</em></strong><br><del>删除线文字</del></p><blockquote><p>这是引用</p><blockquote><p>二级引用</p><blockquote><p>三级了<br>二级</p></blockquote></blockquote></blockquote><hr><p>上面分割线不成功？<br><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1529733303471&amp;di=451ddd05dd47323e509db124d5611b17&amp;imgtype=0&amp;src=http%3A%2F%2Fimg.25pp.com%2Fuploadfile%2Fsoft%2Fimages%2F2013%2F0103%2F20130103033541695.jpg" alt="这是图片" title="这是title"><br><img src="timg.jpg" alt="这是本地图片"><br><img src="/blog/2019/02/12/markdown-test/timg.jpg" title="This is an example image"></p><p><a href="http://www.baidu.com" title="这是超链接title" target="_blank" rel="noopener">超链接百度</a><br><a href="/about">超链接本地</a></p><ul><li>无序列表</li></ul><ul><li>无序列表</li></ul><ul><li>无序列表</li></ul><p>1.有序列表<br>2.有序列表</p><ul><li>列表嵌套<ul><li>列表嵌套<ul><li>又一级<ol><li>啊啊啊</li><li>不不不</li></ol></li></ul></li></ul></li></ul><p><code>console.log(&#39;aa&#39;)</code></p><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">echo</span> <span class="string">'这是一段牛逼的代码'</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><table><thead><tr><th>表格</th><th style="text-align:center">Academy</th><th style="text-align:right">score</th></tr></thead><tbody><tr><td>Harry Potter</td><td style="text-align:center">Gryffindor</td><td style="text-align:right">90</td></tr><tr><td>Harry Potter</td><td style="text-align:center">Gryffindor啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</td><td style="text-align:right">90</td></tr></tbody></table><div class="tip"><br>    预处理器很强大，但它只是编写 CSS 的辅助工具。出于对扩展和维护等方面的考虑，在大型项目中有必要使用预处理器构建 CSS；但是对于小型项目，原生的 CSS 可能是一种更好的选择。不要肆意使用预处理器！<br></div>]]></content>
+    <content type="html"><![CDATA[<h3>这是h2标题</h3><p><strong>这是加粗的字体</strong><em>这是斜体</em><strong><em>斜体加粗</em></strong><s>删除线文字</s></p><blockquote><p>这是引用</p><blockquote><p>二级引用</p><blockquote><p>三级了二级</p></blockquote></blockquote></blockquote><hr><p>上面分割线不成功？<img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1529733303471&amp;di=451ddd05dd47323e509db124d5611b17&amp;imgtype=0&amp;src=http%3A%2F%2Fimg.25pp.com%2Fuploadfile%2Fsoft%2Fimages%2F2013%2F0103%2F20130103033541695.jpg" alt="这是图片" title="这是title"><img src="timg.jpg" alt="这是本地图片"><img src="/blog/2019/02/12/markdown-test/timg.jpg" title="This is an example image"></p><p><a href="http://www.baidu.com" title="这是超链接title" target="_blank" rel="noopener">超链接百度</a><a href="/about">超链接本地</a></p><ul><li>无序列表</li></ul><ul><li>无序列表</li></ul><ul><li>无序列表</li></ul><p>1.有序列表2.有序列表</p><ul><li>列表嵌套<ul><li>列表嵌套<ul><li>又一级<ol><li>啊啊啊</li><li>不不不</li></ol></li></ul></li></ul></li></ul><p><code>console.log('aa')</code></p><p><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">echo</span> <span class="string">'这是一段牛逼的代码'</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><table><thead><tr><th>表格</th><th style="text-align:center">Academy</th><th style="text-align:right">score</th></tr></thead><tbody><tr><td>Harry Potter</td><td style="text-align:center">Gryffindor</td><td style="text-align:right">90</td></tr><tr><td>Harry Potter</td><td style="text-align:center">Gryffindor啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</td><td style="text-align:right">90</td></tr></tbody></table><p>&lt;div class=&quot;tip&quot;&gt;预处理器很强大，但它只是编写 CSS 的辅助工具。出于对扩展和维护等方面的考虑，在大型项目中有必要使用预处理器构建 CSS；但是对于小型项目，原生的 CSS 可能是一种更好的选择。不要肆意使用预处理器！&lt;/div&gt;</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h3 id=&quot;这是h2标题&quot;&gt;&lt;a href=&quot;#这是h2标题&quot; class=&quot;headerlink&quot; title=&quot;这是h2标题&quot;&gt;&lt;/a&gt;这是h2标题&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;这是加粗的字体&lt;/strong&gt;&lt;br&gt;&lt;em&gt;这是斜体&lt;/em&gt;&lt;br&gt;&lt;strong&gt;&lt;
+        &lt;h3&gt;这是h2标题&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;这是加粗的字体&lt;/strong&gt;
+&lt;em&gt;这是斜体&lt;/em&gt;
+&lt;strong&gt;&lt;em&gt;斜体加粗&lt;/em&gt;&lt;/strong&gt;
+&lt;s&gt;删除线文字&lt;/s&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这是引用&lt;/p&gt;
+&lt;blockquo
       
     
     </summary>
@@ -44,13 +74,17 @@
     <published>2019-02-12T02:54:02.000Z</published>
     <updated>2019-02-12T02:54:19.819Z</updated>
     
-    <content type="html"><![CDATA[<h5 id="安装docker-参考官方教程（建议使用最新版本）"><a href="#安装docker-参考官方教程（建议使用最新版本）" class="headerlink" title="安装docker,参考官方教程（建议使用最新版本）"></a>安装docker,参考官方教程（建议使用最新版本）</h5><p><code>curl -fsSL https://get.docker.com/ | sh</code><br>&nbsp;</p><h5 id="添加开机启动"><a href="#添加开机启动" class="headerlink" title="添加开机启动"></a>添加开机启动</h5><p><code>systemctl enable docker</code><br>&nbsp;</p><h5 id="拉取gitea-docker镜像"><a href="#拉取gitea-docker镜像" class="headerlink" title="拉取gitea docker镜像"></a>拉取gitea docker镜像</h5><p><code>docker pull gitea/gitea:latest</code><br>&nbsp;</p><h5 id="创建挂载目录-保证重启docker数据不丢失"><a href="#创建挂载目录-保证重启docker数据不丢失" class="headerlink" title="创建挂载目录,保证重启docker数据不丢失"></a>创建挂载目录,保证重启docker数据不丢失</h5><p><code>sudo mkdir -p /var/lib/gitea</code><br>&nbsp;</p><h5 id="创建docker容器"><a href="#创建docker容器" class="headerlink" title="创建docker容器"></a>创建docker容器</h5><p><code>docker run -d --name=gitea -p 10022:22 -p 10080:3000 -v /var/lib/gitea:/data gitea/gitea:latest</code></p><blockquote><p>创建一个name是gitea,容器端口22映射到母机10022、3000映射到母机10080，挂载母机/var/lib/gitea到docker容器内作为/data挂载点</p></blockquote><blockquote><p>登入后会让你填写基本信息，数据库建议选择sqlite，免去安装数据库的麻烦。</p></blockquote><p>&nbsp;</p><h5 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h5><blockquote><p>安装完成后，修改配置文件conf/app.ini</p></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SSH_PORT         = 20022 //web页面显示的ssh端口</span><br><span class="line">LANDING_PAGE = explore //默认显示登录页</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<h5>安装docker,参考官方教程（建议使用最新版本）</h5><p><code>curl -fsSL https://get.docker.com/ | sh</code> </p><h5>添加开机启动</h5><p><code>systemctl enable docker</code> </p><h5>拉取gitea docker镜像</h5><p><code>docker pull gitea/gitea:latest</code> </p><h5>创建挂载目录,保证重启docker数据不丢失</h5><p><code>sudo mkdir -p /var/lib/gitea</code> </p><h5>创建docker容器</h5><p><code>docker run -d --name=gitea -p 10022:22 -p 10080:3000 -v /var/lib/gitea:/data gitea/gitea:latest</code></p><blockquote><p>创建一个name是gitea,容器端口22映射到母机10022、3000映射到母机10080，挂载母机/var/lib/gitea到docker容器内作为/data挂载点</p></blockquote><blockquote><p>登入后会让你填写基本信息，数据库建议选择sqlite，免去安装数据库的麻烦。</p></blockquote><p> </p><h5>配置文件</h5><blockquote><p>安装完成后，修改配置文件conf/app.ini</p></blockquote><p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SSH_PORT         = 20022 //web页面显示的ssh端口</span><br><span class="line">LANDING_PAGE = explore //默认显示登录页</span><br></pre></td></tr></table></figure></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h5 id=&quot;安装docker-参考官方教程（建议使用最新版本）&quot;&gt;&lt;a href=&quot;#安装docker-参考官方教程（建议使用最新版本）&quot; class=&quot;headerlink&quot; title=&quot;安装docker,参考官方教程（建议使用最新版本）&quot;&gt;&lt;/a&gt;安装docker,参考
+        &lt;h5&gt;安装docker,参考官方教程（建议使用最新版本）&lt;/h5&gt;
+&lt;p&gt;&lt;code&gt;curl -fsSL https://get.docker.com/ | sh&lt;/code&gt;
+ &lt;/p&gt;
+&lt;h5&gt;添加开机启动&lt;/h5&gt;
+&lt;p&gt;&lt;code&gt;systemctl enable d
       
     
     </summary>
@@ -65,7 +99,7 @@
     <published>2019-02-11T07:55:35.920Z</published>
     <updated>2019-02-11T07:55:35.920Z</updated>
     
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2>Quick Start</h2><h3>Create a new post</h3><p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure></p><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3>Run server</h3><p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></p><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3>Generate static files</h3><p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure></p><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3>Deploy to remote sites</h3><p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></p><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
     
     <summary type="html">
     
