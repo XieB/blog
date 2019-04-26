@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://xieb.github.io/blog/"/>
-  <updated>2019-02-14T02:59:57.606Z</updated>
+  <updated>2019-04-26T02:06:54.197Z</updated>
   <id>https://xieb.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>js异常处理</title>
+    <link href="https://xieb.github.io/blog/2019/04/26/js%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/"/>
+    <id>https://xieb.github.io/blog/2019/04/26/js异常处理/</id>
+    <published>2019-04-26T01:51:30.000Z</published>
+    <updated>2019-04-26T02:06:54.197Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="回调异常处理"><a href="#回调异常处理" class="headerlink" title="回调异常处理"></a>回调异常处理</h3><ul><li>异步代码抛异常无法捕获，建议使用Promise处理</li><li>js异常可以捕获语法错误等异常<h3 id="constructor-NaN"><a href="#constructor-NaN" class="headerlink" title="constructor"></a>constructor</h3></li><li>不可以使用async修饰<h3 id="异常流程"><a href="#异常流程" class="headerlink" title="异常流程"></a>异常流程</h3></li><li>如果异常有捕获，不影响下面代码执行</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;回调异常处理&quot;&gt;&lt;a href=&quot;#回调异常处理&quot; class=&quot;headerlink&quot; title=&quot;回调异常处理&quot;&gt;&lt;/a&gt;回调异常处理&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;异步代码抛异常无法捕获，建议使用Promise处理&lt;/li&gt;
+&lt;li&gt;js异常可以捕获语法错误等
+      
+    
+    </summary>
+    
+    
+      <category term="javascript" scheme="https://xieb.github.io/blog/tags/javascript/"/>
+    
+  </entry>
   
   <entry>
     <title>DNS 理解误区及问题</title>
