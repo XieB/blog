@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://xieb.github.io/blog/"/>
-  <updated>2019-04-26T02:12:02.833Z</updated>
+  <updated>2019-07-10T09:31:21.881Z</updated>
   <id>https://xieb.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>node-gyp rebuild</title>
+    <link href="https://xieb.github.io/blog/2019/07/10/node-gyp/"/>
+    <id>https://xieb.github.io/blog/2019/07/10/node-gyp/</id>
+    <published>2019-07-10T09:28:47.000Z</published>
+    <updated>2019-07-10T09:31:21.881Z</updated>
+    
+    <content type="html"><![CDATA[<ul><li>使用node-usb npm包，引入报错</li><li>在包目录下执行node-gyp rebuild重新编译</li><li>node-gyp 为了解决跨平台报错的问题</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ul&gt;
+&lt;li&gt;使用node-usb npm包，引入报错&lt;/li&gt;
+&lt;li&gt;在包目录下执行node-gyp rebuild重新编译&lt;/li&gt;
+&lt;li&gt;node-gyp 为了解决跨平台报错的问题&lt;/li&gt;
+&lt;/ul&gt;
+
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>js异常处理</title>
