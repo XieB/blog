@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://xieb.github.io/blog/"/>
-  <updated>2020-04-17T11:31:31.652Z</updated>
+  <updated>2020-04-18T01:41:11.107Z</updated>
   <id>https://xieb.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>android系统升级webview方法</title>
+    <link href="https://xieb.github.io/blog/2020/04/17/android%E7%B3%BB%E7%BB%9F%E5%8D%87%E7%BA%A7webview%E6%96%B9%E6%B3%95/"/>
+    <id>https://xieb.github.io/blog/2020/04/17/android系统升级webview方法/</id>
+    <published>2020-04-17T13:16:52.000Z</published>
+    <updated>2020-04-18T01:41:11.107Z</updated>
+    
+    <content type="html"><![CDATA[<ul><li>使用adb connect 192.168.1.135连接安卓设备，如果提示<br><code>cannot connect to 192.168.1.135:5555: 由于目标计算机积极拒绝，无法连接。 (10061)</code></li><li>下载adbwireless.apk安装到android设备上，重新尝试</li><li>使用如下命令<br><code>adb shell</code></li><li>进入android命令行，找到webview的目录<br><code>/system/app/webview</code></li><li><p>执行备份操作</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mount -o rw,remount /system // 重新挂载,否则无法写入</span><br><span class="line">cd /system/app</span><br><span class="line">mv webview webview-b</span><br><span class="line">mkdir -p webview/lib/arm</span><br></pre></td></tr></table></figure></li><li><p>下载好的.apk 直接改成 .zip 然后解压缩，复制出libwebviewchromium.so,同webview.apk一并覆盖</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/system/app/webview/lib/arm/libwebviewchromium.so</span><br><span class="line">/system/app/webview/webview.apk</span><br></pre></td></tr></table></figure></li><li><p>设置执行权限<br><code>chmod 777 webview/*</code></p></li><li>重启<br><code>adb reboot</code></li><li>失败了,先用安卓包内置webview解决吧</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ul&gt;
+&lt;li&gt;使用adb connect 192.168.1.135连接安卓设备，如果提示&lt;br&gt;&lt;code&gt;cannot connect to 192.168.1.135:5555: 由于目标计算机积极拒绝，无法连接。 (10061)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;下载a
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>vue项目history模式tomcat配置</title>
