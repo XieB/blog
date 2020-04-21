@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://xieb.github.io/blog/"/>
-  <updated>2020-04-18T01:41:11.107Z</updated>
+  <updated>2020-04-21T06:15:27.172Z</updated>
   <id>https://xieb.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>cordova网络请求404/一次血泪史</title>
+    <link href="https://xieb.github.io/blog/2020/04/21/cordova%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82404-%E4%B8%80%E6%AC%A1%E8%A1%80%E6%B3%AA%E5%8F%B2/"/>
+    <id>https://xieb.github.io/blog/2020/04/21/cordova网络请求404-一次血泪史/</id>
+    <published>2020-04-21T06:08:37.000Z</published>
+    <updated>2020-04-21T06:15:27.172Z</updated>
+    
+    <content type="html"><![CDATA[<ul><li>由于之前封装的axios请求有问题，打印错误的时候给人误导<br><code>Cannot read property &#39;url&#39; of undefined</code></li><li>后来多次看到报404的错误,但是一直没有留意,感觉不应该是这样的问题.</li><li>找了好几圈没找到答案,中间也怀疑过是白名单的问题,但确认了多次,配置没有问题</li><li>最后尝试搜索<br><code>cordova ajax 404</code></li><li>最终找到<a href="http://blog.sina.com.cn/s/blog_be2200300102wti4.html" target="_blank" rel="noopener">答案</a></li><li>最终重装了白名单插件,完美解决<br><code>cordova plugin add cordova-plugin-whitelist --dev</code></li><li>方向错误,永远找不到答案</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ul&gt;
+&lt;li&gt;由于之前封装的axios请求有问题，打印错误的时候给人误导&lt;br&gt;&lt;code&gt;Cannot read property &amp;#39;url&amp;#39; of undefined&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;后来多次看到报404的错误,但是一直没有留意,感觉不应该
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>android系统升级webview方法</title>
