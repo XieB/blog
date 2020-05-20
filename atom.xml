@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://xieb.github.io/blog/"/>
-  <updated>2020-04-21T06:15:27.172Z</updated>
+  <updated>2020-05-20T12:19:24.218Z</updated>
   <id>https://xieb.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>常用框架/库整理</title>
+    <link href="https://xieb.github.io/blog/2020/05/20/%E5%B8%B8%E7%94%A8%E6%A1%86%E6%9E%B6-%E5%BA%93%E6%95%B4%E7%90%86/"/>
+    <id>https://xieb.github.io/blog/2020/05/20/常用框架-库整理/</id>
+    <published>2020-05-20T11:54:35.000Z</published>
+    <updated>2020-05-20T12:19:24.218Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h4><ul><li><a href="https://www.tslang.cn/" target="_blank" rel="noopener">typescript</a></li><li><a href="https://ts.xcatliu.com/" target="_blank" rel="noopener">ts入门推荐</a></li></ul><h4 id="框架"><a href="#框架" class="headerlink" title="框架"></a>框架</h4><ul><li><a href="https://cn.vuejs.org/" target="_blank" rel="noopener">vue</a></li><li><a href="https://www.electronjs.org/" target="_blank" rel="noopener">electron</a></li><li><a href="https://uniapp.dcloud.io/" target="_blank" rel="noopener">uni-app</a></li><li><a href="https://cordova.axuer.com/" target="_blank" rel="noopener">cordova</a></li><li><a href="https://react.docschina.org/" target="_blank" rel="noopener">react</a></li></ul><h4 id="ui框架"><a href="#ui框架" class="headerlink" title="ui框架"></a>ui框架</h4><ul><li><a href="https://iviewui.com/" target="_blank" rel="noopener">iview</a></li><li><a href="https://element.eleme.cn/#/zh-CN" target="_blank" rel="noopener">element</a></li><li><a href="https://youzan.github.io/vant/#/zh-CN/" target="_blank" rel="noopener">vant</a></li></ul><h4 id="时间"><a href="#时间" class="headerlink" title="时间"></a>时间</h4><p><a href="https://day.js.org/docs/zh-CN/parse/parse" target="_blank" rel="noopener">dayjs</a></p><h4 id="css"><a href="#css" class="headerlink" title="css"></a>css</h4><ul><li><a href="https://github.com/lzxb/flex.css/blob/master/docs/zh-ch.md" target="_blank" rel="noopener">flex.css</a></li></ul><h4 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h4><ul><li><a href="https://github.com/jaywcjlove/hotkeys" target="_blank" rel="noopener">hotkeys-js</a></li></ul><h4 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h4><ul><li><a href="https://www.html.cn/doc/lodash/#_templatestring-options" target="_blank" rel="noopener">lodash</a></li></ul><h4 id="日志"><a href="#日志" class="headerlink" title="日志"></a>日志</h4><ul><li><a href="https://www.npmjs.com/package/log4js" target="_blank" rel="noopener">log4js</a></li></ul><h4 id="网络相关"><a href="#网络相关" class="headerlink" title="网络相关"></a>网络相关</h4><ul><li><a href="http://www.axios-js.com/zh-cn/docs/" target="_blank" rel="noopener">axios</a></li><li><a href="https://github.com/wendux/fly" target="_blank" rel="noopener">flyjs</a></li><li><a href="https://github.com/mqttjs/MQTT.js" target="_blank" rel="noopener">mqtt</a></li><li><a href="https://github.com/websockets/ws" target="_blank" rel="noopener">ws</a></li><li><a href="https://github.com/vpulim/node-soap" target="_blank" rel="noopener">soap 配合wcf使用</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h4 id=&quot;基础&quot;&gt;&lt;a href=&quot;#基础&quot; class=&quot;headerlink&quot; title=&quot;基础&quot;&gt;&lt;/a&gt;基础&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.tslang.cn/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>cordova网络请求404/一次血泪史</title>
